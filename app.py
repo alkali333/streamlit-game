@@ -11,7 +11,7 @@ client = openai.OpenAI()  # Make sure to set OPENAI_API_KEY in your environment
 def generate_openai_response(system_prompt: str, user_prompt: str) -> str:
     """Generate response from OpenAI API"""
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
